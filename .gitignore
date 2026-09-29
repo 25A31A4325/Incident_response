@@ -48,6 +48,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Python & Streamlit
+__pycache__/
+*.py[cod]
+*$py.class
+.streamlit/secrets.toml
+.pytest_cache/
+.venv/
+venv/
+env/
+
 # System & IDE files
 .DS_Store
 Thumbs.db

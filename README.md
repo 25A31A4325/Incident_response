@@ -59,6 +59,9 @@ Incident Response/
 │   ├── tailwind.config.ts
 │   └── tsconfig.json
 │
+├── .streamlit/               # Streamlit theme & server configuration
+├── streamlit_app.py          # Interactive Streamlit Web Application
+├── requirements.txt          # Python dependencies for Streamlit Cloud
 ├── .gitignore                # Comprehensive Git ignore rules
 └── README.md                 # Project documentation
 ```
@@ -121,6 +124,36 @@ Incident Response/
    npm run dev
    ```
    The application will be accessible at `http://localhost:3000`.
+
+---
+
+### 3. Streamlit App (Local & Streamlit Cloud)
+
+The repository includes a complete Python Streamlit web application (`streamlit_app.py`) designed for instant deployment on [Streamlit Community Cloud](https://streamlit.io/cloud).
+
+#### Running Locally:
+1. Install Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the Streamlit app:
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+   The app will open automatically in your browser at `http://localhost:8501`.
+
+#### Deploying to Streamlit Cloud (1-Click):
+1. Visit [share.streamlit.io](https://share.streamlit.io/) and log in with GitHub.
+2. Click **New app**.
+3. Select your repository: `25A31A4325/Incident_response`
+4. Set branch: `main`
+5. Set Main file path: `streamlit_app.py`
+6. Click **Advanced settings...** -> **Secrets** and optionally add:
+   ```toml
+   GEMINI_API_KEY = "your-google-gemini-api-key"
+   ```
+7. Click **Deploy!** 🚀
 
 ---
 
